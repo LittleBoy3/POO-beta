@@ -54,7 +54,7 @@ class UIConsola:
             try:
                 self.tienda_libros.agregar_libro_a_carrito(isbn, cantidad)
                 print("Libro agregado al carrito exitosamente.")
-            except (LibroExistenteError, LibroAgotadoError, ExistenciasInsuficientesError) as e:
+            except (LibroExistenteError, LibroAgotadoError, ExistenciasInsuficientesError, Exception) as e:
                 print(f"Error: {e}")
 
     def adicionar_un_libro_a_catalogo(self):
